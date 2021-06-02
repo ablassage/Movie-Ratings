@@ -28,4 +28,4 @@ ggplot(data = movie_data)+
 geom_point(aes(x = budget, y = revenue))+
 theme(axis.text = element_blank())
 
-I got the plot 
+I got the plot movies_data_budget_revenue.pdf, with this plot it's evident theres no relation between budget and revenue.

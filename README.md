@@ -13,7 +13,7 @@ order by
 budget DESC 
 
 This was the SQL query I used to transform the Data. As there were a lot of datapoints with few votes and extremely high ratings.  Multiple movies had sub 200 votes with a rating of 9 or higher.
-For comparison, after this SQL query was utilized and I took the clean data back to Excel, the highest rating of any movie was 8.5.  
+For comparison, after this SQL query was utilized and I took the clean data back to Excel, the highest rating of any movie was 8.5. 
 
 The relationships between movies and rating was less standard than would be expected For example, the movies with the highest budget did not have the highest rating.
 In fact, if a movies budget was over $100 million it brought the average rating down to 6.6 from 6.8.
@@ -21,3 +21,11 @@ The highest budgets spent the most per point while not leading in any other cate
 With only one movie In the top 300 having a higher budget than revenue that came in.
 
 Movies with a longer runtime saw higher avg_ratings, if a movies runtime was over 150 minutes the average rating shot up to 7.34
+
+When I took the analysis to Rstudio and used this code chunk
+
+ggplot(data = movie_data)+
+geom_point(aes(x = budget, y = revenue))+
+theme(axis.text = element_blank())
+
+I got the plot 

@@ -3,6 +3,7 @@
 The goal of this study was to find a correlation for successful movies across many factors.  I started my project by looking at "The Movie Database" dataset of 5,000 movies from 2018.
 I first cleaned the data in Excel removing movies that had 0$ in their budget or revenue.  After that I took the data to SQL to parse out extraneous columns before moving the study back to excel
 
+
 Select 
 
 budget, id, original_title, popularity, production_companies, release_date, revenue, runtime, title, vote_average, vote_count
@@ -19,6 +20,7 @@ order by
 
 budget DESC 
 
+
 This was the SQL query I used to transform the Data. As there were a lot of datapoints with few votes and extremely high ratings.  Multiple movies had sub 200 votes with a rating of 9 or higher.
 For comparison, after this SQL query was utilized and I took the clean data back to Excel, the highest rating of any movie was 8.5. 
 
@@ -31,10 +33,12 @@ Movies with a longer runtime saw higher avg_ratings, if a movies runtime was ove
 
 When I took the analysis to Rstudio and used this code chunk
 
+
 ggplot(data = movie_data)+
 
 geom_point(aes(x = budget, y = revenue))+
 
 theme(axis.text = element_blank())
+
 
 I got the plot movies_data_budget_revenue.pdf, with this plot it's evident theres no relation between budget and revenue.

@@ -20,7 +20,7 @@ In fact, if a movies budget was over $100 million it brought the average rating 
 The highest budgets spent the most per point while not leading in any other category.  Though, as a trend, most movies with a high budget at the very least recoup their spendings.
 With only one movie In the top 300 having a higher budget than revenue that came in.
 
-Movies with a longer runtime saw higher avg_ratings, if a movies runtime was over 150 minutes the average rating shot up to 7.34
+Movies with a longer runtime saw higher avg_ratings, if a movies runtime was over 150 minutes the average rating shot up to 7.34.  Though it is a weak correlation in the pdf avg_ratings_runtime you can see the correlation between runtime and avg_ratings.
 
 When I took the analysis to Rstudio and used this code chunk
 

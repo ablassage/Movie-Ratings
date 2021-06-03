@@ -29,10 +29,16 @@ In fact, if a movies budget was over $100 million it brought the average rating 
 The highest budgets spent the most per point while not leading in any other category.  Though, as a trend, most movies with a high budget at the very least recoup their spendings.
 With only one movie In the top 300 having a higher budget than revenue that came in.
 
-Movies with a longer runtime saw higher avg_ratings, if a movies runtime was over 150 minutes the average rating shot up to 7.34.  Though it is a weak correlation in the pdf avg_ratings_runtime you can see the correlation between runtime and avg_ratings.
+Movies with a longer runtime saw higher avg_ratings, if a movies runtime was over 150 minutes the average rating shot up to 7.34.  
 
-When I took the analysis to Rstudio and used this code chunk
+When I took the analysis to Rstudio and used these code chunk
+ggplot(data = movie_data)+
 
+  geom_point(aes(x = runtime, y = vote_average))+
+
+  theme(axis.text = element_blank())
+
+Though it is a weak correlation in the pdf avg_ratings_runtime you can see the correlation between runtime and avg_ratings.
 
 ggplot(data = movie_data)+
 
@@ -42,3 +48,5 @@ theme(axis.text = element_blank())
 
 
 I got the plot movies_data_budget_revenue.pdf, with this plot it's evident theres no relation between budget and revenue.
+
+It seems that there is no correlation between elements in this study that can show whether a movie will succeed or fail.  Logically, budget should have the most representation in if a movie succeeds or fails, but this study has shown that budget has no correlation to box office revenue or average ratings.  The strongest correlator for average ratings is runtime, though if movies were made to have longer runtime strictly for this reason it is likely this correlation would fall.

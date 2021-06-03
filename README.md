@@ -1,6 +1,6 @@
 # Movie-Ratings 
 
-The goal of this study was to find a correlation between Budget, revenue, and total rating.  I started my project by looking at "The Movie Database" dataset of 5,000 movies from 2018.
+The goal of this study was to find a correlation for successful movies across many factors.  I started my project by looking at "The Movie Database" dataset of 5,000 movies from 2018.
 I first cleaned the data in Excel removing movies that had 0$ in their budget or revenue.  After that I took the data to SQL to parse out extraneous columns before moving the study back to excel
 
 Select 

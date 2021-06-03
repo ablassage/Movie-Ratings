@@ -8,7 +8,7 @@ budget, id, original_title, popularity, production_companies, release_date, reve
 FROM 
 `concise-haven-314917.Movie_ratings.movie_ratings`
 where 
-vote_count > 1500
+vote_count > 1000
 order by
 budget DESC 
 

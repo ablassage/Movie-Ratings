@@ -4,12 +4,19 @@ The goal of this study was to find a correlation for successful movies across ma
 I first cleaned the data in Excel removing movies that had 0$ in their budget or revenue.  After that I took the data to SQL to parse out extraneous columns before moving the study back to excel
 
 Select 
+
 budget, id, original_title, popularity, production_companies, release_date, revenue, runtime, title, vote_average, vote_count
-FROM 
+
+FROM
+
 `concise-haven-314917.Movie_ratings.movie_ratings`
-where 
+
+where
+
 vote_count > 1000
+
 order by
+
 budget DESC 
 
 This was the SQL query I used to transform the Data. As there were a lot of datapoints with few votes and extremely high ratings.  Multiple movies had sub 200 votes with a rating of 9 or higher.
@@ -25,7 +32,9 @@ Movies with a longer runtime saw higher avg_ratings, if a movies runtime was ove
 When I took the analysis to Rstudio and used this code chunk
 
 ggplot(data = movie_data)+
+
 geom_point(aes(x = budget, y = revenue))+
+
 theme(axis.text = element_blank())
 
 I got the plot movies_data_budget_revenue.pdf, with this plot it's evident theres no relation between budget and revenue.
